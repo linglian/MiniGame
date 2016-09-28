@@ -1,4 +1,4 @@
-
+ï»¿
 
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Õâ½ö½öÊÇ¸öÌ°³ÔÉß</title>
+        <title>è¿™ä»…ä»…æ˜¯ä¸ªè´ªåƒè›‡</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -17,7 +17,7 @@ and open the template in the editor.
         <canvas id="myCanvas" onkeydown="canvasKeyDown()" width="300" height="550" style="border:1px solid #d3d3d3;">
         </canvas>
         <script language = "javascript">
-            //ÆÁÄ»ÊÊÅä
+            //å±å¹•é€‚é…
             var windowWidth = document.body.scrollWidth * 0.9;
             var windowHeight = document.body.scrollHeight * 0.9;
             var wWidth = document.body.scrollWidth * 0.9;
@@ -58,7 +58,7 @@ and open the template in the editor.
             var touX;
             var touY;
             var gold = 3;
-            var maxSpeed = 10;
+            var maxSpeed = 30;
             var speed = 0;
             var isTouch = false;
             var method = false;
@@ -91,11 +91,11 @@ and open the template in the editor.
                 }
                 isFirst2 = true;
             }
-            /*µ¥Ö¸ÍÏ¶¯*/
+            /*å•æŒ‡æ‹–åŠ¨*/
             window.addEventListener('touchstart', function (event) {
-                // Èç¹ûÕâ¸öÔªËØµÄÎ»ÖÃÄÚÖ»ÓĞÒ»¸öÊÖÖ¸µÄ»°
+                // å¦‚æœè¿™ä¸ªå…ƒç´ çš„ä½ç½®å†…åªæœ‰ä¸€ä¸ªæ‰‹æŒ‡çš„è¯
                 if (event.targetTouches.length === 1) {
-                    event.preventDefault();// ×èÖ¹ä¯ÀÀÆ÷Ä¬ÈÏÊÂ¼ş£¬ÖØÒª 
+                    event.preventDefault();// é˜»æ­¢æµè§ˆå™¨é»˜è®¤äº‹ä»¶ï¼Œé‡è¦ 
                     var touch = event.targetTouches[0];
                     touX = touch.clientX;
                     touY = touch.clientY;
@@ -142,7 +142,7 @@ and open the template in the editor.
                 }
             }, false);
             function doKeyDown(e) {
-                if (window.event) // IE8 ÒÔ¼°¸üÔç°æ±¾
+                if (window.event) // IE8 ä»¥åŠæ›´æ—©ç‰ˆæœ¬
                 {
                     x = event.keyCode;
                 } else if (event.which) // IE9/Firefox/Chrome/Opera/Safari
@@ -169,7 +169,7 @@ and open the template in the editor.
                         break;
                     case 'c':
                     case 'C':
-                        window.alert("Ä£Ê½ÇĞ»»");
+                        window.alert("æ¨¡å¼åˆ‡æ¢");
                         changeMode();
                         break;
                 }
@@ -196,7 +196,7 @@ and open the template in the editor.
                 canvas.focus();
                 window.addEventListener('keydown', doKeyDown, true);
                 ident = window.setInterval(function () {
-                    //¿ªÊ¼
+                    //å¼€å§‹
                     try {
                         function init() {
                             var date = new Date();
@@ -252,7 +252,7 @@ and open the template in the editor.
                             food = 2;
                             point = 4;
                             gold = 3;
-                            maxSpeed = 10;
+                            maxSpeed = 30;
                             speed = 0;
                             map[headX][headY] = 2;
                             drawMap();
@@ -293,22 +293,22 @@ and open the template in the editor.
                             var ty = headY;
                             if (face != faceNow) {
                                 switch (face) {
-                                    case 0://ÉÏ
+                                    case 0://ä¸Š
                                         if (faceNow !== 1) {
                                             faceNow = 0;
                                         }
                                         break;
-                                    case 1://ÏÂ
+                                    case 1://ä¸‹
                                         if (faceNow !== 0) {
                                             faceNow = 1;
                                         }
                                         break;
-                                    case 2://×ó
+                                    case 2://å·¦
                                         if (faceNow !== 3) {
                                             faceNow = 2;
                                         }
                                         break;
-                                    case 3://ÓÒ
+                                    case 3://å³
                                         if (faceNow !== 2) {
                                             faceNow = 3;
                                         }
@@ -316,21 +316,21 @@ and open the template in the editor.
                                 }
                             }
                             switch (faceNow) {
-                                case 0://ÉÏ
+                                case 0://ä¸Š
                                     ty--;
                                     break;
-                                case 1://ÏÂ
+                                case 1://ä¸‹
                                     ty++;
                                     break;
-                                case 2://×ó
+                                case 2://å·¦
                                     tx--;
                                     break;
-                                case 3://ÓÒ
+                                case 3://å³
                                     tx++;
                                     break;
                             }
                             if (tx < 0 || ty < 0 || tx >= mapX || ty > mapY || (map[tx][ty] !== 0 && map[tx][ty] !== 3)) {
-                                if (window.confirm("ÄãËÀÁË,ÊÇ·ñÖØĞÂ¿ªÊ¼")) {
+                                if (window.confirm("ä½ æ­»äº†,æ˜¯å¦é‡æ–°å¼€å§‹")) {
                                     init();
                                 } else {
                                     window.clearTimeout(ident);
@@ -461,9 +461,9 @@ and open the template in the editor.
                             gradient.addColorStop("0.5", "blue");
                             gradient.addColorStop("1.0", "red");
                             g.strokeStyle = gradient;
-                            g.fillText("»ı·Ö:" + gold, windowWidth * 0.05, windowHeight * 0.9);
-                            g.fillText("×÷Õß:ÁèÁµ    QQ:1105998755@qq.com", windowWidth * 0.05, windowHeight * 0.93);
-                            g.fillText("Ö÷Ò³:www.ssk91.com", windowWidth * 0.05, windowHeight * 0.96);
+                            g.fillText("ç§¯åˆ†:" + gold, windowWidth * 0.05, windowHeight * 0.9);
+                            g.fillText("ä½œè€…:å‡Œæ‹    QQ:1105998755@qq.com", windowWidth * 0.05, windowHeight * 0.93);
+                            g.fillText("ä¸»é¡µ:www.ssk91.com", windowWidth * 0.05, windowHeight * 0.96);
                         }
                         if (isFirst) {
                             isFirst = false;
@@ -488,9 +488,9 @@ and open the template in the editor.
                     } catch (e) {
                         window.alert(e.toLocaleString());
                     }
-                    //½áÊø
+                    //ç»“æŸ
                 }, 10);
-            window.alert("ÕâÊÇÌ°³ÔÉßÓÎÏ·");
+            window.alert("è¿™æ˜¯è´ªåƒè›‡æ¸¸æˆ");
             }
         </script>
 
